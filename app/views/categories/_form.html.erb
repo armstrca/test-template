@@ -1,0 +1,57 @@
+<%= form_with(model: category) do |form| %>
+  <% if category.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+        <% category.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label : inventory_transaction, style: "display: block" %>
+    <%= form.text_field : inventory_transaction %>
+  </div>
+
+  <div>
+    <%= form.label : location, style: "display: block" %>
+    <%= form.text_field : location %>
+  </div>
+
+  <div>
+    <%= form.label : order_item, style: "display: block" %>
+    <%= form.text_field : order_item %>
+  </div>
+
+  <div>
+    <%= form.label : order, style: "display: block" %>
+    <%= form.text_field : order %>
+  </div>
+
+  <div>
+    <%= form.label : report, style: "display: block" %>
+    <%= form.text_field : report %>
+  </div>
+
+  <div>
+    <%= form.label : role, style: "display: block" %>
+    <%= form.text_field : role %>
+  </div>
+
+  <div>
+    <%= form.label : supplier, style: "display: block" %>
+    <%= form.text_field : supplier %>
+  </div>
+
+  <div>
+    <%= form.label : user, style: "display: block" %>
+    <%= form.text_field : user %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
