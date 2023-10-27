@@ -7,3 +7,6 @@ application.debug = false
 window.Stimulus   = application
 
 export { application }
+  //= require jquery
+  //= require jquery_ujs
+  //= require bootstrap_sb_admin_base_v2
